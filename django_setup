@@ -1,0 +1,10 @@
+import os
+import django
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Users_django.settings")
+django.setup()
+
+from users.models import User
+
+user = User(name="Михайло", email="misha7777@gmail.com", role="admin")
+user.save()
